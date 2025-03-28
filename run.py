@@ -242,8 +242,8 @@ def update_slack_status_upcoming(event):
 
 def main():
     today = datetime.date.today()
-    # Fetch events from today up to today + 3 days
-    merged_events = get_events_for_range(today, today + datetime.timedelta(days=3))
+    # Fetch events from today up to today + 5 days
+    merged_events = get_events_for_range(today, today + datetime.timedelta(days=5))
 
     # First, check if today is a holiday.
     event_today = find_holiday_for_date(merged_events, today)
